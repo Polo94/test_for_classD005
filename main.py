@@ -3,6 +3,37 @@ print('\nWelcome to our quiz!')
 print('You have 3 lives.')
 print('-------')
 
+count = 3
+
+liste=["\n**Question 1 : Combien font 1+1 ? ",
+       "\n**Question 2 : Quel est le nom du président français ? ",
+       "\n**Question 3 : Quel est le premier jour de la semaine ? ",
+       "2", "MACRON", "LUNDI"]
+
+ma_valeur=input(liste[0]).lower()
+ma_valeur=str(ma_valeur)
+
+for i in liste[3]:
+    while ma_valeur == liste[3]:
+        print("nombre")
+        break
+    while ma_valeur != liste[3]:
+        count-=1
+        print("no", count, "vies restantes")
+
+ma_valeur=input(liste[1]).lower()
+ma_valeur=str(ma_valeur)
+
+for ma_valeur in liste:
+    if ma_valeur == liste[4]:
+        print("président")
+
+ma_valeur=input(liste[2]).lower()
+ma_valeur=str(ma_valeur)
+
+for ma_valeur in liste:
+    if ma_valeur == liste[5]:
+        print("jour")
 #réponse 1
 
 bad_message = 'Too bad! That is not the correct answer'
@@ -26,7 +57,7 @@ while reponse_1 != bonne_R:
         print("\nVous n'avez plus de vies, c'est perdu !")
         break
     reponse_1 = input('\n**Combien font 1+1 ? ')
-    reponse_1 = int(reponse_1)
+    reponse_1 = str(reponse_1)
 
 else:
     print('Good job! This is the right answer')
